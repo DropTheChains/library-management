@@ -4,14 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57b9c111-9225-4759-be48-b9e73a657798" name="更改" comment="" />
+    <list default="true" id="57b9c111-9225-4759-be48-b9e73a657798" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/common/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/request/BaseRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/request/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/User.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/User.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -41,7 +63,7 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
   <component name="RunManager">
