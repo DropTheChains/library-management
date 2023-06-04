@@ -2,13 +2,18 @@
   <div>
     <!-- 搜索表单 -->
     <div>
-      <el-input style="width: 240px" placeholder="请输入名称"></el-input>
+      <el-input style="width: 240px" placeholder="请输入名称" v-model="params.name"></el-input>
       <el-input
         style="width: 240px; margin-left: 5px"
         placeholder="请输入联系方式"
+        v-model="params.phone"
       ></el-input>
       <el-button style="margin-left: 5px" type="primary"
-        ><i class="el-icon-search"></i>搜索</el-button
+        @click="load"><i class="el-icon-search"></i>搜索</el-button
+      >
+
+      <el-button style="margin-left: 5px" type=""
+        @click="reset">重置</el-button
       >
     </div>
     <!-- 表单主体 -->
@@ -27,7 +32,10 @@
         background
         small
         layout="prev, pager, next"
-        :total="tableData.length"
+        :current-page="params.pageNum"
+        :page-size="params.pageSize"
+        :total="total"
+        @current-change="handleCurrentChange"
       >
       </el-pagination>
     </div>
@@ -35,11 +43,19 @@
 </template>
 
 <script>
+import request from "@/common/request";
 export default {
   name: "HomeView",
   data() {
     return {
       tableData: [],
+      total: 0,
+      params: {
+        pageNum: 1,
+        pageSize: 5, 
+        name: '',
+        phone: '',
+      },
     };
   },
   created() {
@@ -47,13 +63,28 @@ export default {
   },
   methods: {
     load() {
-      fetch("http://localhost:9090/user/list")
-        .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
-          this.tableData = res;
-        });
+      request.get("/user/page",{
+          params: this.params
+        }).then(res => {
+        if (res.code === "200") {
+          this.tableData = res.data.list;
+          this.total = res.data.total;
+        }
+      });
     },
+
+    handleCurrentChange(pageNum){
+      console.log(pageNum)
+      this.params.pageNum = pageNum
+      this.load()
+    },
+    reset(){
+      this.params.name = '',
+      this.params.phone = '',
+      this.load()
+    }
+
+    
   },
 };
 </script>
