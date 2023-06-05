@@ -13,4 +13,6 @@ public interface UserMapper {
     List<User> list();
 
     List<User> listByCondition(UserRequest userRequest);
+
+    void save(User user);
 }

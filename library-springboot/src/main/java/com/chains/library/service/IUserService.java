@@ -11,4 +11,6 @@ public interface IUserService {
     List<User> list();
 
     Object page(UserRequest userRequest);
+
+    void save(User user);
 }

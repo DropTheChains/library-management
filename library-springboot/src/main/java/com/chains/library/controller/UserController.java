@@ -26,4 +26,9 @@ public class UserController {
     public Result page(UserRequest userRequest){
         return Result.success(iuserService.page(userRequest));
     }
+    @PostMapping("/save")
+    public Result save(@RequestBody User user){
+        iuserService.save(user);
+        return Result.success();
+    }
 }

@@ -35,4 +35,9 @@ public class UserService implements IUserService {
         return pageInfo;
     }
 
+    @Override
+    public void save(User user) {
+        userMapper.save(user);
+    }
+
 }

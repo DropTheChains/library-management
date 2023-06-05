@@ -15,10 +15,18 @@
       <div style="width: 200px; overflow: hidden; margin-right:2px; background-color: white">
         <el-menu :default-active="$router.path" router class="el-menu-demo">
           <el-menu-item index="/">首页</el-menu-item>
-          <el-submenu index="2">
-            <template slot="title">我的工作台</template>
-          <el-menu-item index="/about">关于详情页</el-menu-item>
+          
+          <el-submenu index=""> 
+              <template slot="title">
+                <span>
+                  会员管理
+                </span>
+              </template>
+            <el-menu-item index="/addUser">  会员添加</el-menu-item>
+            <el-menu-item index="/user">  会员列表 </el-menu-item>
           </el-submenu>
+
+          
         </el-menu>
       </div>
       <!-- 主体区域 -->

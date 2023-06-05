@@ -4,6 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.chains.library.mapper.UserMapper">
+    <insert id="save">
+        insert into user(name,username,age,sex,phone,address)
+        values(#{ name },#{username},#{age},#{sex},#{phone},#{address})
+    </insert>
+
     <select id="list" resultType="com.chains.library.entity.User">
         select * from user
     </select>
