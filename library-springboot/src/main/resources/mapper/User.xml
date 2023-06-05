@@ -5,15 +5,18 @@
 
 <mapper namespace="com.chains.library.mapper.UserMapper">
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
-        insert into user(name,username,age,sex,phone,address,cardid)
-        values(#{ name },#{username},#{age},#{sex},#{phone},#{address},#{cardid})
+        insert into user(name,username,age,sex,phone,address,cardid,createtime,updatetime)
+        values(#{ name },#{username},#{age},#{sex},#{phone},#{address},#{cardid},#{createTime},#{updateTime})
     </insert>
 
     <update id="update">
         update user set
-        name = #{name},username = #{username},age = #{age},sex = #{sex},phone =#{phone} ,address =#{address}
+        name = #{name},username = #{username},age = #{age},sex = #{sex},phone =#{phone} ,address =#{address},updatetime= #{updateTime}
         where id = #{id}
     </update>
+    <delete id="delById">
+        delete from user where id = #{id}
+    </delete>
 
     <select id="list" resultType="com.chains.library.entity.User">
         select * from user

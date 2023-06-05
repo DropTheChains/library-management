@@ -18,4 +18,6 @@ public interface UserMapper {
     User getById(Integer id);
 
     Integer update(User user);
+
+    void delById(Integer id);
 }

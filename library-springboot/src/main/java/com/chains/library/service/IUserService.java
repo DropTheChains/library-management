@@ -17,4 +17,6 @@ public interface IUserService {
     User getById(Integer id);
 
     Integer update(User user);
+
+    void delById(Integer id);
 }

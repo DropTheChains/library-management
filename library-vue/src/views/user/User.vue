@@ -30,7 +30,13 @@
     <el-table-column label="操作">
       <template v-slot="scope">
           <el-button type="primary" @click="$router.push('/editUser?id=' + scope.row.id)"> 编辑</el-button>
-      </template>
+            <el-popconfirm 
+            style="margin-left: 5px"
+            title="这是一段内容确定删除吗？" 
+            @confirm="del(scope.row.id)">
+              <el-button slot="reference">删除</el-button>
+            </el-popconfirm>
+      </template> 
     </el-table-column>
     </el-table>
 
@@ -91,6 +97,16 @@ export default {
       this.params.name = '',
       this.params.phone = '',
       this.load()
+    },
+    del(id){
+      request.get('/user/delete/' + id).then( res =>{
+        if(res.code === "200"){
+          this.$notify("删除成功！")
+          this.load()
+        }else{
+          this.$notify(res.msg)
+        }
+      })
     }
 
     

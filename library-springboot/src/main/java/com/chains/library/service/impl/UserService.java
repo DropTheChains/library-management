@@ -46,6 +46,7 @@ public class UserService implements IUserService {
         String cradid = format + s;
         cradid = cradid.substring(0, 16);
         user.setCardid(cradid);
+        user.setCreateTime(new Date());
         return userMapper.save(user);
     }
 
@@ -57,7 +58,13 @@ public class UserService implements IUserService {
 
     @Override
     public Integer update(User user) {
+        user.setUpdateTime(new Date());
         return userMapper.update(user);
+    }
+
+    @Override
+    public void delById(Integer id) {
+        userMapper.delById(id);
     }
 
 }

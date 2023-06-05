@@ -33,7 +33,7 @@ public class UserController {
         int returnid = iuserService.save(user);
         return Result.success(returnid);
     }
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Result getById(@PathVariable Integer id){
         return Result.success(iuserService.getById(id));
     }
@@ -41,6 +41,11 @@ public class UserController {
     @PostMapping("/update")
     public Result update(@RequestBody User user){
         return Result.success(iuserService.update(user));
+    }
+    @GetMapping("/delete/{id}")
+    public Result delById(@PathVariable Integer id){
+        iuserService.delById(id);
+        return Result.success();
     }
 
 }
