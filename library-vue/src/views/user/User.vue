@@ -18,15 +18,24 @@
     </div>
     <!-- 表单主体 -->
     <el-table :data="tableData">
+      <el-table-column prop="id" label="编号"></el-table-column>
       <el-table-column prop="name" label="名称"></el-table-column>
+      <el-table-column prop="username" label="用户名"></el-table-column>
+      <el-table-column prop="cardid" label="卡号"></el-table-column>
       <el-table-column prop="age" label="年龄"></el-table-column>
       <el-table-column prop="address" label="地址"></el-table-column>
       <el-table-column prop="phone" label="联系方式"></el-table-column>
       <el-table-column prop="sex" label="性别"></el-table-column>
+
+    <el-table-column label="操作">
+      <template v-slot="scope">
+          <el-button type="primary" @click="$router.push('/editUser?id=' + scope.row.id)"> 编辑</el-button>
+      </template>
+    </el-table-column>
     </el-table>
 
     <!-- 分页 -->
-    <div>
+    <div>    
       <el-pagination
         style="margin-top: 10px"
         background
@@ -52,7 +61,7 @@ export default {
       total: 0,
       params: {
         pageNum: 1,
-        pageSize: 5, 
+        pageSize: 10  , 
         name: '',
         phone: '',
       },

@@ -3,7 +3,6 @@ package com.chains.library.mapper;
 import com.chains.library.controller.request.UserRequest;
 import com.chains.library.entity.User;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -14,5 +13,9 @@ public interface UserMapper {
 
     List<User> listByCondition(UserRequest userRequest);
 
-    void save(User user);
+    Integer save(User user);
+
+    User getById(Integer id);
+
+    Integer update(User user);
 }

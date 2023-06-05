@@ -6,14 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="57b9c111-9225-4759-be48-b9e73a657798" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/User.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/User.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/library-vue/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/library-vue/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-vue/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/library-vue/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-vue/src/views/user/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/library-vue/src/views/user/User.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

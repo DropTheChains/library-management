@@ -12,5 +12,9 @@ public interface IUserService {
 
     Object page(UserRequest userRequest);
 
-    void save(User user);
+    Integer save(User user);
+
+    User getById(Integer id);
+
+    Integer update(User user);
 }

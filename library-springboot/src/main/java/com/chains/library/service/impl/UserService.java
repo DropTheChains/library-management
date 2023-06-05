@@ -1,5 +1,7 @@
 package com.chains.library.service.impl;
 
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.util.IdUtil;
 import com.chains.library.controller.request.UserRequest;
 import com.chains.library.entity.User;
 import com.chains.library.mapper.UserMapper;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -36,8 +39,25 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public void save(User user) {
-        userMapper.save(user);
+    public Integer save(User user) {
+        Date date = new Date();
+        String s = IdUtil.fastSimpleUUID();
+        String format = DateUtil.format(date, "yyyyMMdd");
+        String cradid = format + s;
+        cradid = cradid.substring(0, 16);
+        user.setCardid(cradid);
+        return userMapper.save(user);
+    }
+
+    @Override
+    public User getById(Integer id) {
+        User byId = userMapper.getById(id);
+        return byId;
+    }
+
+    @Override
+    public Integer update(User user) {
+        return userMapper.update(user);
     }
 
 }

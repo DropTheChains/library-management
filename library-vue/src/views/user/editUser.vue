@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>新增会员页面</h2>
+        <h2>修改会员页面</h2>
         
         <el-form v-model="form">
             <el-form-item label="姓名">
@@ -23,7 +23,7 @@
             </el-form-item>
         </el-form>
         <div>
-        <el-button @click="save">新增</el-button>
+        <el-button @click="editUser">修改</el-button>
         <el-button @click="reset">重置</el-button>
         </div>
     </div>
@@ -31,30 +31,37 @@
 
 <script>
 import request from '@/common/request'
-
 export default ({
-    name: "addUser",
+    name: "editUser",
     data() {
         return {
-            form: {
+            form:{
 
             }
-        }
+        };
     },
     methods: {
-        save() {
-            request.post('/user/save',this.form).then( res =>{
+        getById(){
+            const id = this.$route.query.id
+            request.get('/user/' + id).then( res =>{
+                this.form = res.data
+            })
+        },
+        editUser(){
+            request.post('/user/update',this.form).then(res => {
                 if( res.code === '200'){
-                    this.$notify.success('新增成功')
+                    this.$notify.success('修改成功')
                 }else{
                     this.$notify.error(res.msg)
                 }
             })
         },
         reset(){
-            this.form = {}
+            this.getById()
         }
-    },  
-    
+    },
+    created() {
+        this.getById()
+    },
 })
 </script>
