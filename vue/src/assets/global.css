@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+* {
+    box-sizing: border-box;
+}
+
+th {
+    background-color: aliceblue !important;
+}

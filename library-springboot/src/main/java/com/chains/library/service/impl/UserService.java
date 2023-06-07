@@ -41,10 +41,10 @@ public class UserService implements IUserService {
     @Override
     public Integer save(User user) {
         Date date = new Date();
-        String s = IdUtil.fastSimpleUUID();
+        String s = String.valueOf(IdUtil.fastSimpleUUID().hashCode());
         String format = DateUtil.format(date, "yyyyMMdd");
         String cradid = format + s;
-        cradid = cradid.substring(0, 16);
+//        cradid = cradid.substring(0, 16);
         user.setCardid(cradid);
         user.setCreateTime(new Date());
         return userMapper.save(user);
