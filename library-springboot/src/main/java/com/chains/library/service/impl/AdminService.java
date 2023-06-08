@@ -1,16 +1,16 @@
 package com.chains.library.service.impl;
 
-import cn.hutool.core.date.DateUtil;
-import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.crypto.SecureUtil;
+import com.chains.library.controller.dto.LoginDTO;
 import com.chains.library.controller.request.AdminRequest;
-import com.chains.library.controller.request.UserRequest;
 import com.chains.library.entity.Admin;
-import com.chains.library.entity.User;
+import com.chains.library.exception.ServiceException;
 import com.chains.library.mapper.AdminMapper;
 import com.chains.library.service.IAdminService;
-import com.chains.library.service.IUserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +19,9 @@ import java.util.List;
 
 @Service
 public class AdminService implements IAdminService {
+
+    private static final String DEFAULT_PASS = "admin" ;
+    private static final String PASS_SALT = "qwer";
 
     @Autowired
     AdminMapper adminMapper;
@@ -41,8 +44,12 @@ public class AdminService implements IAdminService {
 
     @Override
     public Integer save(Admin admin) {
+        if (StrUtil.isBlank(admin.getPassword())){
+            admin.setPassword(securePass(DEFAULT_PASS));
+        }
+        admin.setPassword(securePass(admin.getPassword()));
         Date date = new Date();
-        admin.setCreateTime(new Date());
+        admin.setCreateTime(date);
         return adminMapper.save(admin);
     }
 
@@ -73,6 +80,22 @@ public class AdminService implements IAdminService {
     @Override
     public void delById(Integer id) {
         adminMapper.delById(id);
+    }
+
+    @Override
+    public LoginDTO login(AdminRequest adminRequest) {
+        adminRequest.setPassword(securePass(adminRequest.getPassword()));
+        Admin login = adminMapper.login(adminRequest);
+        if (login == null){
+            throw new ServiceException("用户名或密码错误！");
+        }
+        LoginDTO loginDTO = new LoginDTO();
+        BeanUtils.copyProperties(login,loginDTO);
+        return loginDTO;
+    }
+
+    public String securePass(String pass){
+        return SecureUtil.md5(pass + PASS_SALT);
     }
 
 }

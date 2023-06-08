@@ -25,4 +25,6 @@ public interface AdminMapper {
 
 
     List<Integer> getAllId();
+
+    Admin login(AdminRequest adminRequest);
 }

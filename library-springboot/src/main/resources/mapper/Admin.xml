@@ -23,7 +23,7 @@
     </select>
 
     <select id="listByCondition" resultType="com.chains.library.entity.Admin">
-        select * from admin
+        select id,username,phone,email,createtime,updatetime from admin
         <where>
             <if test="username != null and username !='' ">
                 username like concat( '%', #{ username }, '%')
@@ -42,6 +42,10 @@
 
     <select id="getAllId" resultType="java.lang.Integer">
         select id from admin
+    </select>
+    <select id="login" resultType="com.chains.library.entity.Admin">
+        select id,username,password,phone,email from admin
+        where username = #{username} and password = #{ password }
     </select>
 
 </mapper>

@@ -1,6 +1,7 @@
 package com.chains.library.controller;
 
 import com.chains.library.common.Result;
+import com.chains.library.controller.dto.LoginDTO;
 import com.chains.library.controller.request.AdminRequest;
 import com.chains.library.controller.request.UserRequest;
 import com.chains.library.entity.Admin;
@@ -16,6 +17,11 @@ import java.util.List;
 public class AdminController {
     @Autowired
     IAdminService iAdminService;
+    @PostMapping("/login")
+    public Result login(@RequestBody AdminRequest adminRequest){
+        LoginDTO login = iAdminService.login(adminRequest);
+        return Result.success(login);
+    }
 
     @GetMapping("/list")
     public Result list(){

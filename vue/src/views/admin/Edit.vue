@@ -31,13 +31,14 @@ export default {
   },
   created() {
     const id = this.$route.query.id
-    request.get("/admin/" + id).then(res => {
+    request.get("/admin/get/" + id).then(res => {
       this.form = res.data
     })
   },
   methods: {
     save() {
-      request.put('/admin/update', this.form).then(res => {
+      this.form.id = this.$route.query.id
+      request.post('/admin/update', this.form).then(res => {
         if (res.code === '200') {
           this.$notify.success('更新成功')
           this.$router.push("/adminList")

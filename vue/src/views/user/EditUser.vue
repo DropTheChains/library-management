@@ -3,7 +3,10 @@
     <div style="margin-bottom: 30px">编辑用户</div>
     <el-form :inline="true" :model="form" label-width="100px">
       <el-form-item label="卡号">
-        <el-input v-model="form.username" disabled></el-input>
+        <el-input v-model="form.cardid" disabled></el-input>
+      </el-form-item>
+      <el-form-item label="用户名">
+        <el-input v-model="form.username" ></el-input>
       </el-form-item>
       <el-form-item label="姓名">
         <el-input v-model="form.name" placeholder="请输入姓名"></el-input>
@@ -40,7 +43,7 @@ export default {
   },
   created() {
     const id = this.$route.query.id
-    request.get("/user/" + id).then(res => {
+    request.get("/user/get/" + id).then(res => {
       this.form = res.data
     })
   },

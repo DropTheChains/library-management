@@ -1,5 +1,6 @@
 package com.chains.library.service;
 
+import com.chains.library.controller.dto.LoginDTO;
 import com.chains.library.controller.request.AdminRequest;
 import com.chains.library.controller.request.UserRequest;
 import com.chains.library.entity.Admin;
@@ -21,4 +22,6 @@ public interface IAdminService {
     Boolean update(Admin admin);
 
     void delById(Integer id);
+
+    LoginDTO login(AdminRequest adminRequest);
 }
