@@ -1,6 +1,7 @@
 package com.chains.library.mapper;
 
 import com.chains.library.controller.request.AdminRequest;
+import com.chains.library.controller.request.PasswordRequest;
 import com.chains.library.controller.request.UserRequest;
 import com.chains.library.entity.Admin;
 import com.chains.library.entity.User;
@@ -23,8 +24,10 @@ public interface AdminMapper {
 
     void delById(Integer id);
 
-
     List<Integer> getAllId();
 
     Admin login(AdminRequest adminRequest);
+    void changePass(Integer id,String password);
+
+    Admin getByUsername(String username);
 }

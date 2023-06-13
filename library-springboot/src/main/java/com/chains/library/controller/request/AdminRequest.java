@@ -8,4 +8,5 @@ public class AdminRequest extends BaseRequest{
     private String password;
     private String phone;
     private String email;
+    private Boolean status;
 }

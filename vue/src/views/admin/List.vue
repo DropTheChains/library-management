@@ -106,7 +106,7 @@ export default {
         this.$notify.warning('您的操作不合法')
         return
       }
-      request.put('/admin/update', row).then(res => {
+      request.post('/admin/update', row).then(res => {
         if (res.code === '200') {
           this.$notify.success('操作成功')
           this.load()
@@ -122,7 +122,7 @@ export default {
     savePass() {
       this.$refs['formRef'].validate((valid) => {
         if (valid) {
-          request.put('/admin/password', this.form).then(res => {
+          request.post('/admin/password', this.form).then(res => {
             if (res.code === '200') {
               this.$notify.success("修改成功")
               if (this.form.id === this.admin.id) {   // 当前修改的用户id 等于当前登录的管理员id，那么修改成功之后需要重新登录

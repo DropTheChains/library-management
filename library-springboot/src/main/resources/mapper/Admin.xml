@@ -11,7 +11,13 @@
 
     <update id="update">
         update admin set
-        username = #{username},phone =#{phone} ,email=#{email},updatetime= #{updateTime}
+        username = #{username},phone =#{phone} ,email=#{email},status = #{status},updatetime= #{updateTime}
+        where id = #{id}
+    </update>
+
+    <update id="changePass">
+        update admin set
+        password = #{password}
         where id = #{id}
     </update>
     <delete id="delById">
@@ -23,7 +29,7 @@
     </select>
 
     <select id="listByCondition" resultType="com.chains.library.entity.Admin">
-        select id,username,phone,email,createtime,updatetime from admin
+        select id,username,phone,email,status,createtime,updatetime from admin
         <where>
             <if test="username != null and username !='' ">
                 username like concat( '%', #{ username }, '%')
@@ -44,8 +50,13 @@
         select id from admin
     </select>
     <select id="login" resultType="com.chains.library.entity.Admin">
-        select id,username,password,phone,email from admin
+        select id,username,password,phone,email,status from admin
         where username = #{username} and password = #{ password }
     </select>
+    <select id="getByUsername" resultType="com.chains.library.entity.Admin">
+        select * from admin
+        where username = #{username}
+    </select>
+
 
 </mapper>

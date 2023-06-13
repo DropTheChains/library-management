@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57b9c111-9225-4759-be48-b9e73a657798" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_auth0_java_jwt_3_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/request/PasswordRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/common/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/common/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/dto/LoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/dto/LoginDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/exception/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/exception/ExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/exception/ServiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/exception/ServiceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/request/AdminRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/request/AdminRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IAdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/Admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/Admin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,18 +67,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/code/Java_WorkSpace/library-management/library-springboot/src/main/resources/mapper",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/code/Java_WorkSpace/library-management/library-springboot/src/main/resources/mapper&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\code\Java_WorkSpace\library-management\library-springboot\src\main\resources\mapper" />
@@ -137,5 +137,16 @@
       <path value="$PROJECT_DIR$/library-springboot" />
       <path value="$PROJECT_DIR$/library-vue" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/AdminController.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

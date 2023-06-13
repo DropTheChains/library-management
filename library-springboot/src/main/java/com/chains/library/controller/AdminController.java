@@ -3,6 +3,7 @@ package com.chains.library.controller;
 import com.chains.library.common.Result;
 import com.chains.library.controller.dto.LoginDTO;
 import com.chains.library.controller.request.AdminRequest;
+import com.chains.library.controller.request.PasswordRequest;
 import com.chains.library.controller.request.UserRequest;
 import com.chains.library.entity.Admin;
 import com.chains.library.entity.User;
@@ -21,6 +22,11 @@ public class AdminController {
     public Result login(@RequestBody AdminRequest adminRequest){
         LoginDTO login = iAdminService.login(adminRequest);
         return Result.success(login);
+    }
+    @PostMapping("/password")
+    public Result password(@RequestBody PasswordRequest request){
+        iAdminService.changePass(request);
+        return Result.success();
     }
 
     @GetMapping("/list")
