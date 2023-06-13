@@ -8,6 +8,7 @@ import com.chains.library.entity.Admin;
 import com.chains.library.exception.ServiceException;
 import com.chains.library.mapper.AdminMapper;
 import com.chains.library.service.IAdminService;
+import com.chains.library.utils.TokenUtils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.BeanUtils;
@@ -67,13 +68,13 @@ public class AdminService implements IAdminService {
 
     @Override
     public Boolean update(Admin admin) {
-        List<Integer> allId = getAllId();
-        if (allId.contains(admin.getId())){
-            admin.setUpdateTime(new Date());
-            adminMapper.update(admin);
-            return true;
-        }else{
-            return false;
+       List<Integer> allId = getAllId();
+            if (allId.contains(admin.getId())){
+                admin.setUpdateTime(new Date());
+                adminMapper.update(admin);
+                return true;
+            }else{
+                return false;
         }
     }
 
@@ -91,6 +92,8 @@ public class AdminService implements IAdminService {
         }
         LoginDTO loginDTO = new LoginDTO();
         BeanUtils.copyProperties(login,loginDTO);
+        String genToken = TokenUtils.genToken(String.valueOf(login.getId()), login.getPassword());
+        loginDTO.setToken(genToken);
         return loginDTO;
     }
 

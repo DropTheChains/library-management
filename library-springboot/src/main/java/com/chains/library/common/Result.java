@@ -29,5 +29,11 @@ public class Result {
         result.setCode(ERROR_CODE);
         return result;
     }
+    public static Result error(String code,String msg){
+        Result result = new Result();
+        result.setMsg(msg);
+        result.setCode(code);
+        return result;
+    }
 
 }
