@@ -33,13 +33,13 @@ export default {
   },
   created() {
     const id = this.$route.query.id
-    request.get("/category/" + id).then(res => {
+    request.get("/category/get/" + id).then(res => {
       this.form = res.data
     })
   },
   methods: {
     save() {
-      request.put('/category/update', this.form).then(res => {
+      request.post('/category/update', this.form).then(res => {
         if (res.code === '200') {
           this.$notify.success('更新成功')
           this.$router.push("/categoryList")

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chains.library.mapper.CategoryMapper">
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        insert into Category(name,remark,pid,createtime,updatetime)
+        values(#{name},#{remark},#{pid},#{createTime},#{updateTime})
+    </insert>
+
+    <update id="update">
+        update Category set
+        name = #{name},remark = #{remark},pid = #{pid},updatetime= #{updateTime}
+        where id = #{id}
+    </update>
+    <delete id="delById">
+        delete from Category where id = #{id}
+    </delete>
+
+    <select id="list" resultType="com.chains.library.entity.Category">
+        select * from Category
+    </select>
+
+    <resultMap id="categoryMap" type="com.chains.library.entity.Category">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="remark" property="remark"></result>
+        <result column="pid" property="pid"></result>
+        <result column="createtime" property="createTime"></result>
+        <result column="updatetime" property="updateTime"></result>
+        <collection property="children" ofType="com.chains.library.entity.Category" column="id"
+                    select="selectByPid" ></collection>
+    </resultMap>
+    <select id="selectByPid"   resultType="com.chains.library.entity.Category" >
+        select * from category where pid = #{id}
+    </select>
+
+    <select id="listByCondition" resultMap="categoryMap">
+<!--        select * from Category-->
+<!--        <where>-->
+<!--            isnull(pid)-->
+<!--            <if test="name != null and name !='' ">-->
+<!--               and  name like concat( '%', #{ name }, '%')-->
+<!--            </if>-->
+<!--        </where>-->
+<!--        order by id desc-->
+        select c1.*  from category c1
+        left join category c2
+        on c1.id = c2.pid
+        <where>
+            isnull(c1.pid)
+            <if test="name != null and name != '' ">
+                and (c1.name like concat('%' ,#{name}, '%') or c2.name like concat('%',#{name},'%'))
+            </if>
+        </where>
+        group by c1.id
+        order by c1.id desc
+    </select>
+
+    <select id="getById" resultType="com.chains.library.entity.Category">
+        select * from Category where id = #{id}
+    </select>
+</mapper>

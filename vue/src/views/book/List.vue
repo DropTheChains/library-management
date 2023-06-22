@@ -24,8 +24,8 @@
           <el-image :src="scope.row.cover" :preview-src-list="[scope.row.cover]"></el-image>
         </template>
       </el-table-column>
-      <el-table-column prop="createtime" label="创建时间"></el-table-column>
-      <el-table-column prop="updatetime" label="更新时间"></el-table-column>
+      <el-table-column prop="createTime" label="创建时间"></el-table-column>
+      <el-table-column prop="updateTime" label="更新时间"></el-table-column>
       <el-table-column label="操作" width="140">
         <template v-slot="scope">
 <!--          scope.row 就是当前行数据-->
@@ -104,7 +104,7 @@ export default {
       this.load()
     },
     del(id) {
-      request.delete("/book/delete/" + id).then(res => {
+      request.get("/book/del/" + id).then(res => {
         if (res.code === '200') {
           this.$notify.success('删除成功')
           this.load()

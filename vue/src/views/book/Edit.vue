@@ -85,7 +85,7 @@ export default {
     })
 
     const id = this.$route.query.id
-    request.get("/book/" + id).then(res => {
+    request.get("/book/get/" + id).then(res => {
       this.form = res.data
       if (this.form.category) {
         this.form.categories = this.form.category.split(' > ')
@@ -100,7 +100,7 @@ export default {
       }
     },
     save() {
-      request.put('/book/update', this.form).then(res => {
+      request.post('/book/update', this.form).then(res => {
         if (res.code === '200') {
           this.$notify.success('更新成功')
           this.$router.push("/bookList")
