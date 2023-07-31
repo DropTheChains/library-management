@@ -5,15 +5,15 @@
 
 <mapper namespace="com.chains.library.mapper.BookMapper">
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
-        insert into book(name,description,publish_date,author,publisher,category,book_no,cover,createtime,updatetime)
-        values(#{ name },#{description},#{publishDate},#{author},#{publisher},#{category},#{bookNo},#{cover},#{createTime},#{updateTime})
+        insert into book(name,description,publish_date,author,publisher,category,book_no,cover,score,nums,createtime,updatetime)
+        values(#{ name },#{description},#{publishDate},#{author},#{publisher},#{category},#{bookNo},#{cover},#{score},#{nums},#{createTime},#{updateTime})
     </insert>
 
     <update id="update" useGeneratedKeys="true" keyProperty="id">
         update book set
         name = #{name},description = #{description},publish_date = #{publishDate},
-        author = #{author},publisher =#{publisher} ,category =#{category},book_no=#{bookNo},
-        cover =#{cover},updatetime= #{updateTime}
+        author = #{author},publisher =#{publisher} ,category =#{category},book_no=#{bookNo},score=#{score},
+        cover =#{cover},updatetime =#{updateTime},nums =#{nums}
         where id = #{id}
     </update>
 
@@ -40,5 +40,8 @@
 
     <select id="getById" resultType="com.chains.library.entity.Book">
         select * from book where id = #{id}
+    </select>
+    <select id="getByNo" resultType="com.chains.library.entity.Book">
+        select * from book where book_no = #{bookNo}
     </select>
 </mapper>

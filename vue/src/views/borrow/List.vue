@@ -23,10 +23,10 @@
       <el-table-column prop="returnDate" label="归还日期"></el-table-column>
       <el-table-column prop="note" label="过期提醒">
         <template v-slot="scope">
-          <el-tag type="success" v-if="scope.row.note === '正常'">{{ scope.row.note }}</el-tag>
-          <el-tag type="primary" v-if="scope.row.note === '即将到期'">{{ scope.row.note }}</el-tag>
-          <el-tag type="warning" v-if="scope.row.note === '已到期'">{{ scope.row.note }}</el-tag>
-          <el-tag type="danger" v-if="scope.row.note === '已过期'">{{ scope.row.note }}</el-tag>
+          <el-tag type="success" v-if="scope.row.notice === '正常'">{{ scope.row.notice }}</el-tag>
+          <el-tag type="primary" v-if="scope.row.notice === '即将到期'">{{ scope.row.notice }}</el-tag>
+          <el-tag type="warning" v-if="scope.row.notice === '已到期'">{{ scope.row.notice }}</el-tag>
+          <el-tag type="danger" v-if="scope.row.notice === '已过期'">{{ scope.row.notice }}</el-tag>
         </template>
       </el-table-column>
       <el-table-column label="管理">
@@ -79,8 +79,9 @@ export default {
       params: {
         pageNum: 1,
         pageSize: 10,
-        name: '',
-        bookNo: ''
+        bookName: '',
+        bookNo: '',
+        userName: ''
       }
     }
   },
@@ -114,7 +115,7 @@ export default {
       this.load()
     },
     del(id) {
-      request.delete("/borrow/delete/" + id).then(res => {
+      request.get("/borrow/del/" + id).then(res => {
         if (res.code === '200') {
           this.$notify.success('删除成功')
           this.load()

@@ -98,7 +98,7 @@ export default {
     },
     selBook() {
       const book = this.books.find(v => v.bookNo === this.form.bookNo)
-      request.get('/book/' + book.id).then(res => {
+      request.get('/book/get/' + book.id).then(res => {
         this.$set(this.form, 'bookName', res.data.name)
         this.form.score = res.data.score
         this.form.nums = res.data.nums
@@ -106,7 +106,7 @@ export default {
     },
     selUser() {
       const user = this.users.find(v => v.username === this.form.userNo)
-      request.get('/user/' + user.id).then(res => {
+      request.get('/user/get/' + user.id).then(res => {
         this.$set(this.form, 'userName', res.data.name)
         this.form.userPhone = res.data.phone
         this.form.account = res.data.account

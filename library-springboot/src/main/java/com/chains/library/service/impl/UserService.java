@@ -67,4 +67,16 @@ public class UserService implements IUserService {
         userMapper.delById(id);
     }
 
+    @Override
+    public void handleAccount(User user) {
+        Integer score = user.getScore();
+        if (score == null){
+            return;
+        }
+        Integer id = user.getId();
+        User dbUser = userMapper.getById(id);
+        user.setAccount(dbUser.getAccount()+ score);
+        userMapper.update(user);
+    }
+
 }

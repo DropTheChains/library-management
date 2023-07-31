@@ -114,7 +114,7 @@ export default {
   },
   methods: {
     changeStatus(row) {
-      request.put('/user/update', row).then(res => {
+      request.post('/user/update', row).then(res => {
         if (res.code === '200') {
           this.$notify.success('操作成功')
           this.load()

@@ -42,7 +42,7 @@
       <el-form-item label="封面" prop="cover">
         <el-upload
             class="avatar-uploader"
-            :action="'http://localhost:9090/api/book/file/upload?token=' + this.admin.token"
+            :action="'http://localhost:9090/book/file/upload?token=' + this.admin.token"
             :show-file-list="false"
             :on-success="handleCoverSuccess"
         >

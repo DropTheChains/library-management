@@ -20,4 +20,6 @@ public interface UserMapper {
     Integer update(User user);
 
     void delById(Integer id);
+
+    User getByNo(String userNo);
 }

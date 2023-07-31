@@ -15,8 +15,11 @@ public class User {
     private String phone;
     private String address;
     private String cardid;
+    private Boolean Status;
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date createTime;
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date updateTime;
+    private Integer account;
+    private Integer score;
 }

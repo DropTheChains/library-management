@@ -33,6 +33,12 @@ public class UserController {
         int returnid = iuserService.save(user);
         return Result.success(returnid);
     }
+
+    @PostMapping("/account")
+    public Result account(@RequestBody User user){
+        iuserService.handleAccount(user);
+        return Result.success();
+    }
     @GetMapping("/get/{id}")
     public Result getById(@PathVariable Integer id){
         return Result.success(iuserService.getById(id));

@@ -19,4 +19,6 @@ public interface IUserService {
     Integer update(User user);
 
     void delById(Integer id);
+
+    void handleAccount(User user);
 }

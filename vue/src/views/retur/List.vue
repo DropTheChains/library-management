@@ -2,7 +2,7 @@
   <div>
     <!--    搜索表单-->
     <div style="margin-bottom: 20px">
-      <el-input style="width: 240px" placeholder="请输入图书名称" v-model="params.name"></el-input>
+      <el-input style="width: 240px" placeholder="请输入图书名称" v-model="params.bookName"></el-input>
       <el-input style="width: 240px; margin-left: 5px" placeholder="请输入图书标准码" v-model="params.bookNo"></el-input>
       <el-input style="width: 240px; margin-left: 5px" placeholder="请输入用户名称" v-model="params.userName"></el-input>
       <el-button style="margin-left: 5px" type="primary" @click="load"><i class="el-icon-search"></i> 搜索</el-button>
@@ -67,8 +67,9 @@ export default {
       params: {
         pageNum: 1,
         pageSize: 10,
-        name: '',
-        bookNo: ''
+        bookName: '',
+        bookNo: '',
+        userName: ''
       }
     }
   },
@@ -102,7 +103,7 @@ export default {
       this.load()
     },
     del(id) {
-      request.delete("/borrow/deleteRetur/" + id).then(res => {
+      request.get("/borrow/delRetur/" + id).then(res => {
         if (res.code === '200') {
           this.$notify.success('删除成功')
           this.load()
