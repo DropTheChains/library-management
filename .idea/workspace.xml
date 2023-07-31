@@ -5,36 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5987e81d-92ee-4cf8-bfec-9cf8a5269428" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/BorrowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/request/BorrowRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/Borrow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/Retur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/BorrowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/po/BorrowReturCountPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IBorrowService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/BorrowService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/Borrow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/QQ截图20230801032631.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/utils/TokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/java/com/chains/library/utils/TokenUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/Admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/Admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/Book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/Book.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/User.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-springboot/src/main/resources/mapper/User.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/book/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/book/Add.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/book/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/book/Edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/borrow/Add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/borrow/Add.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/borrow/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/borrow/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/retur/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/retur/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/src/views/user/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/user/User.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,39 +45,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/code/Java_WorkSpace/LeetCode&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;e59a85d7339eeee7e02dcb720963b860&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "D:/code/Java_WorkSpace/library-management/files",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "e59a85d7339eeee7e02dcb720963b860",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\Java_WorkSpace\library-management\files" />
+      <recent name="D:\code\Java_WorkSpace\library-management" />
       <recent name="D:\code\Java_WorkSpace\library-management\library-springboot\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -154,7 +129,7 @@
       <workItem from="1688981111729" duration="14000" />
       <workItem from="1690553355095" duration="7444000" />
       <workItem from="1690794270826" duration="609000" />
-      <workItem from="1690804892487" duration="18081000" />
+      <workItem from="1690804892487" duration="19459000" />
     </task>
     <servers />
   </component>
