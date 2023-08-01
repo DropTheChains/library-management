@@ -153,7 +153,7 @@ export default {
       this.load()
     },
     del(id) {
-      request.delete("/user/delete/" + id).then(res => {
+      request.get("/user/delete/" + id).then(res => {
         if (res.code === '200') {
           this.$notify.success('删除成功')
           this.load()
